@@ -6,4 +6,11 @@
 
     <mvc:annotation-driven/>
     <context:component-scan base-package="com.adanac.study"/>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/*"/>
+            <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
